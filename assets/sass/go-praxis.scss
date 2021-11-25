@@ -1,0 +1,35 @@
+.documento-titulo {
+    color: #00477f;
+}
+.documento-actions {
+    float: right;
+    list-style: none;
+    .documento-action {
+        display: inline-block;
+        vertical-align: middle;
+        a {
+            color: #2991d6;
+            font-size: 1em;
+            transition: color 0.2s;
+        }
+        a:active,
+        a:focus,
+        a:hover,
+        a:focus:hover {
+            color: #2275ac;
+        }
+    }
+}
+.categorias-documento-widget {
+    ul {
+        li {
+            &.current-cat {
+                a {
+                    text-indent: .5em;
+                    font-size: 1.25em;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
