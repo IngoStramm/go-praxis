@@ -1,16 +1,15 @@
 {
     "name": "go-praxis",
     "description": "Descrição do Go Praxis.",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "title": "Go Praxis",
     "homepage": "https://agencialaf.com",
     "main": "Gruntfile.js",
     "devDependencies": {
         "glob-watcher": "~3.0.0",
-        "grunt": "^1.3.0",
+        "grunt": "^1.4.1",
         "grunt-contrib-imagemin": "^4.0.0",
         "grunt-contrib-jshint": "~1.0.0",
-        "grunt-contrib-sass": "~1.0.0",
         "grunt-contrib-uglify": "^5.0.1",
         "grunt-contrib-watch": "^1.1.0",
         "grunt-text-replace": "~0.4.0",
@@ -25,6 +24,7 @@
     },
     "dependencies": {
         "grunt-sass": "^3.1.0",
-        "node-sass": "^6.0.1"
+        "node-sass": "^7.0.0",
+        "ruby": "^0.6.1"
     }
 }

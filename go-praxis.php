@@ -4,7 +4,7 @@
  * Plugin Name: Go Praxis
  * Plugin URI: https://agencialaf.com
  * Description: Descrição do Go Praxis.
- * Version: 0.0.1
+ * Version: 0.1.0
  * Author: Ingo Stramm
  * Text Domain: gpx
  * License: GPLv2

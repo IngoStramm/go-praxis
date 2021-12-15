@@ -123,15 +123,30 @@ get_header();
         <!-- .four-columns - sidebar -->
         <div class="sidebar sidebar-1 four columns">
             <div class="widget-area clearfix">
+                <?php $categorias_documentos = wp_list_categories(array(
+                    'current_category'  => get_queried_object_id(),
+                    'taxonomy'          => 'categoria-documento',
+                    'show_option_all'   => __('Todos Documentos', 'gpx'),
+                    'echo'              => false,
+                    'hide_empty'        => true,
+                    'title_li'          => ''
+                )); ?>
                 <?php
-                $terms = get_terms(array(
-                    'taxonomy'              => 'categoria-documento',
-                    'hide_empty'            => true,
-                ));
+                // $terms = get_terms(array(
+                //     'taxonomy'              => 'categoria-documento',
+                //     'hide_empty'            => true,
+                // ));
                 // gpx_debug($terms);
-                if ($terms) { ?>
-                    <aside id="categorias-documento" class="widget widget_categories categorias-documento-widget">
-                        <?php /* ?><h3><?php _e('Categorias', 'gpx'); ?></h3><?php */ ?>
+                ?>
+                <aside id="categorias-documento" class="widget widget_categories categorias-documento-widget">
+                    <?php /* ?><h3><?php _e('Categorias', 'gpx'); ?></h3><?php */ ?>
+
+                    <ul class="gpx-toggle-list">
+                        <?php echo $categorias_documentos; ?>
+                    </ul>
+
+                    <?php /* ?>
+
                         <ul>
 
                             <?php
@@ -146,6 +161,8 @@ get_header();
 
                             <?php $count = 2; ?>
                             <?php foreach ($terms as $term) { ?>
+                                <?php // gpx_debug($term->parent); 
+                                ?>
                                 <?php $active_class = get_queried_object_id() == $term->term_id ? $css_current_cat_class : null; ?>
                                 <li class="cat-item cat-item-<?php echo $count . ' ' . $active_class; ?>"><a href="<?php echo get_term_link($term->term_id); ?>"><?php echo $term->name; ?></a>
                                 </li>
@@ -153,8 +170,10 @@ get_header();
                             <?php } ?>
                         </ul>
 
-                    </aside>
-                <?php } ?>
+                        <?php */ ?>
+
+                </aside>
+
             </div>
         </div>
 

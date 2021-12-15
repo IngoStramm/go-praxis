@@ -3,6 +3,17 @@ module.exports = function (grunt) {
     'use strict';
 
     const sass = require('node-sass');
+    // expand: true,
+    //     cwd: '<%= dirs.sass %>',
+    //         src: ['*.scss'],
+    //             dest: '<%= dirs.css %>',
+    //                 ext: '.css'
+    // sass.render({
+    //     file: '<%= dirs.sass %>',
+    //     outFile: '<%= dirs.css %>',
+    //     outputStyle: 'compressed'
+    // });
+
     require('load-grunt-tasks')(grunt);
 
     var odinConfig = {
@@ -42,9 +53,13 @@ module.exports = function (grunt) {
         },
 
         sass: {
+            // file: '<%= dirs.sass %>',
+            // outFile: '<%= dirs.css %>',
+            // outputStyle: 'compressed',
+            // implementation: sass
             options: {
                 implementation: sass,
-                // sourceMap: true,
+                sourceMap: true,
                 style: 'compressed'
             },
             dist: {

@@ -20,16 +20,40 @@
         }
     }
 }
-.categorias-documento-widget {
+.categorias-documento-widget.widget_categories {
     ul {
         li {
+            a {
+                display: inline-block;
+                padding: 5px 10px;
+            }
             &.current-cat {
                 a {
-                    text-indent: .5em;
+                    text-indent: 0.5em;
                     font-size: 1.25em;
                     text-transform: uppercase;
                 }
+                .children {
+                    a {
+                        font-size: inherit;
+                        text-transform: none;
+                        text-indent: 0;
+                    }
+                }
             }
+        }
+    }
+}
+
+.gpx-toggle-list {
+    .toggle {
+        float: right;
+        font-size: 1.5em !important;
+    }
+    .children {
+        display: none;
+        &.visible {
+            display: block;
         }
     }
 }
