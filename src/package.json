@@ -1,7 +1,7 @@
 {
     "name": "go-praxis",
     "description": "Descrição do Go Praxis.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "title": "Go Praxis",
     "homepage": "https://agencialaf.com",
     "main": "Gruntfile.js",

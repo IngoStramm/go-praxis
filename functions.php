@@ -53,7 +53,9 @@ function gpx_filter_login_page_content($content)
     if ($post_id != $login_page)
         return $content;
 
-    $redirect = isset($_GET['redirect']) && !empty($_GET['redirect']) ? urlencode($_GET['redirect']) : null;
+    $redirect = isset($_GET['redirect']) && !empty($_GET['redirect']) ? $_GET['redirect'] : null;
+
+    gpx_debug($redirect);
 
     $args = array(
         'echo'          => false,
