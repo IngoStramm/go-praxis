@@ -55,8 +55,6 @@ function gpx_filter_login_page_content($content)
 
     $redirect = isset($_GET['redirect']) && !empty($_GET['redirect']) ? $_GET['redirect'] : null;
 
-    gpx_debug($redirect);
-
     $args = array(
         'echo'          => false,
         'redirect'      => $redirect
